@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-Bold';
+    src: url('./assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('./assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url('./assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+    
+  
+  body{
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat top center, var(--Purple-100);
+    background-size: 100% cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main{
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+  }
+
+  .faq{
+    display: flex;
+    font-size: 1.8rem;
+    font-family: 'WorkSans', sans-serif;
+    padding: 20px;
+  }
+
+  .faq img{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+  }
+
+  .accord{
+    padding: 20px;
+  }
+
+  .front{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'WorkSans', sans-serif;
+    color: var(--Purple-950);
+    cursor: pointer;
+  }
+
+  .child-accord{
+    font-size: 1rem;
+    font-family: 'WorkSans', sans-serif;
+    color: var(--Purple-600);
+    display: none;
+  }
