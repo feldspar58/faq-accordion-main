@@ -49,7 +49,7 @@
   
   body{
     background: url(./assets/images/background-pattern-desktop.svg) no-repeat top center, var(--Purple-100);
-    background-size: 100% cover;
+    background-size: 100% auto, auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -98,5 +98,39 @@
     font-family: 'WorkSans', sans-serif;
     color: var(--Purple-600);
     display: none;
+  }
+
+  @media (max-width: 640px) {
+    body {
+        background: 
+          url(./assets/images/background-pattern-mobile.svg) no-repeat top center,
+          var(--Purple-100);
+        background-size: 100% auto, auto;
+        min-height: 100vh;
+      }
+      
+
+    .main{
+        width: 350px;
+        padding: 8px;
+    }
+
+    .front h3{
+        font-size: 1rem;
+    }
+
+    .faq img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .faq{
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .child-accord{
+        font-size: .7rem;
+    }
   }
   
