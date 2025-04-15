@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const accords = document.querySelectorAll('.child-accord');
   
     const selectedAccord = (button) => {
-      buttons.forEach(button => button.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
     };
   
@@ -17,9 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   
     buttons.forEach((button, index) => {
-      const accord = accords[index];   
+      const accord = accords[index];
+      const plus = button.querySelector('.plus');
+      const minus = button.querySelector('.minus');
+  
       button.addEventListener('click', () => {
         const isActive = accord.classList.contains('active');
+  
+        buttons.forEach(btn => {
+          const btnPlus = btn.querySelector('.plus');
+          const btnMinus = btn.querySelector('.minus');
+          if (btnPlus && btnMinus) {
+            btnPlus.style.display = 'inline';
+            btnMinus.style.display = 'none';
+          }
+        });
   
         if (isActive) {
           accord.classList.remove('active');
@@ -28,8 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           selectedAccord(button);
           selectedParagraph(accord);
+  
+          if (plus && minus) {
+            plus.style.display = 'none';
+            minus.style.display = 'inline';
+          }
         }
-        console.log('here for it');
       });
     });
   });
